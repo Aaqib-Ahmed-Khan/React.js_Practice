@@ -3,7 +3,7 @@ import Counter from "./Counter";
 import { useState } from "react";
 import Hidingcomp from "./Hidingcom";
 import Login, { Profile, Settings, Userkey } from "./userComponent";
-
+import Multiplecondition from "./Mutiplecondition";
 function App() {
   const [display, setDisplay] = useState(true);
   const [fruit, setFruit] = useState("apple");
@@ -27,6 +27,7 @@ function App() {
       <Profile />
       <Settings />
       <Colour />
+      <Multiplecondition></Multiplecondition>
     </div>
   );
 }
