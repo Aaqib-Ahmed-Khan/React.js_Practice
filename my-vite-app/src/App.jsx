@@ -1,23 +1,49 @@
+// App.js
 import Counter from "./Counter";
 import { useState } from "react";
-// import Header from "./header"
+import Hidingcomp from "./Hidingcom";
+import Login, { Profile, Settings, Userkey } from "./userComponent";
 
-import Login,{Profile,Settings, Userkey} from "./userComponent"
-function App(){
-  const [fruit,setFruit]=useState("apple");
-  const handleFruit=()=>{
-    setFruit("banana")}
-    // console.log(fruit );
-  return(
-  <div>
-    <h1>state in react</h1>
-    <h1>{fruit}</h1>
-    <Counter></Counter>
-    <button onClick={handleFruit}>change fruit name</button>
-  </div>
-  )
-  
+function App() {
+  const [display, setDisplay] = useState(true);
+  const [fruit, setFruit] = useState("apple");
+
+  const handleFruit = () => {
+    setFruit("banana");
+  };
+
+  return (
+    <div>
+      <h1>Toggle Button</h1>
+      <button onClick={() => setDisplay(!display)}>Toggle</button>
+      {display ? <Hidingcomp /> : null}
+
+      <h1>State in React</h1>
+      <h2>{fruit}</h2>
+      <button onClick={handleFruit}>Change Fruit Name</button>
+
+      <Counter />
+      <Login />
+      <Profile />
+      <Settings />
+      <Colour />
+    </div>
+  );
 }
+
+// These can be moved to a separate file if needed
+function Colour() {
+  return (
+    <div>
+      <h1>Red</h1>
+      <h1>{Userkey}</h1>
+    </div>
+  );
+}
+
+// export default App;
+
+
   // const [count,setcount]
 
   // let fruit="mango";
