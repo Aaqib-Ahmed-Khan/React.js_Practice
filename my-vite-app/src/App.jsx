@@ -1,8 +1,17 @@
 import Header from "./header"
 import Login,{Profile,Settings, Userkey} from "./userComponent"
 function App(){
+  let fruit="mango";
+
+  const handleFruit=()=>{
+    fruit="banana"
+    console.log(fruit);
+    
+  }
   return (
     <div>
+      <h1>{fruit}</h1>
+      <button onClick={handleFruit}>change fruit name</button>
       <Header></Header>
   <h1>hello {sum()}</h1>
   <Fruit></Fruit>
