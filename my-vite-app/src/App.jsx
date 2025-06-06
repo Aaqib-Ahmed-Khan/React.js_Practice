@@ -4,6 +4,7 @@ import { useState } from "react";
 import Hidingcomp from "./Hidingcom";
 import Login, { Profile, Settings, Userkey } from "./userComponent";
 import Multiplecondition from "./Mutiplecondition";
+import Propuser from "./Propuser";
 function App() {
   const [display, setDisplay] = useState(true);
   const [fruit, setFruit] = useState("apple");
@@ -28,6 +29,8 @@ function App() {
       <Settings />
       <Colour />
       <Multiplecondition></Multiplecondition>
+    <h1>propuser</h1>
+    <Propuser name="aaqib"/>
     </div>
   );
 }
