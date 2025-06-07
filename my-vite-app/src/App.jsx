@@ -5,6 +5,7 @@ import Hidingcomp from "./Hidingcom";
 import Login, { Profile, Settings, Userkey } from "./userComponent";
 import Multiplecondition from "./Mutiplecondition";
 import Propuser from "./Propuser";
+import Get_input_fieldvalue from "./Get_input_fieldvalue.";
 function App() {
   const [display, setDisplay] = useState(true);
   const [fruit, setFruit] = useState("apple");
@@ -31,6 +32,7 @@ function App() {
       <Multiplecondition></Multiplecondition>
     <h1>propuser</h1>
     <Propuser name="aaqib"/>
+    <Get_input_fieldvalue></Get_input_fieldvalue>
     </div>
   );
 }
